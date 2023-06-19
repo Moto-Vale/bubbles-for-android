@@ -122,9 +122,9 @@ public class BubblesService extends Service {
     }
 
     private WindowManager.LayoutParams buildLayoutParamsForBubble(int x, int y) {
-        int typeOverlay = WindowManager.LayoutParams.TYPE_PHONE;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            typeOverlay = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
+        int typeOverlay = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.O) {
+            typeOverlay = WindowManager.LayoutParams.TYPE_PHONE;
         }
 
         WindowManager.LayoutParams params = new WindowManager.LayoutParams(
@@ -143,9 +143,9 @@ public class BubblesService extends Service {
         int x = 0;
         int y = 0;
 
-        int typeOverlay = WindowManager.LayoutParams.TYPE_SYSTEM_OVERLAY;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            typeOverlay = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
+        int typeOverlay = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.O) {
+            typeOverlay = WindowManager.LayoutParams.TYPE_SYSTEM_OVERLAY;
         }
 
         WindowManager.LayoutParams params = new WindowManager.LayoutParams(
