@@ -144,8 +144,9 @@ public class BubblesService extends Service {
         int y = 0;
 
         int typeOverlay = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
-       
-       
+        // if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.O) {
+        //     typeOverlay = WindowManager.LayoutParams.TYPE_SYSTEM_OVERLAY;
+        // }
 
         WindowManager.LayoutParams params = new WindowManager.LayoutParams(
                 WindowManager.LayoutParams.MATCH_PARENT,
